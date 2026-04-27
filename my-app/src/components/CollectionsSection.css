@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Agraham';
+  src: url('../assets/fonts/Agraham.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.collections-section {
+  padding: 60px 32px;
+  background: linear-gradient(180deg, #6e0f1a, #b23a48);
+  text-align: center;
+  margin-top: 0;
+}
+
+.collections-title {
+font-family: 'Agraham', Georgia, serif;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 40px;
+   line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.collections-wrapper {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.collection-card {
+  flex: 1;
+  max-width: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .collections-section {
+    padding: 40px 16px;
+  }
+  
+  .collections-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .collections-wrapper {
+    overflow-x: auto;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  
+  .collections-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .collection-card {
+    flex: none;
+    width: 280px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .collections-title { font-size: 24px; }
+  .collection-card { width: 220px; }
+}

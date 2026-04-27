@@ -1,0 +1,211 @@
+.footer-parent {
+  background: linear-gradient(180deg, #C42049 0%, #54061D 100%);
+  color: #fff;
+  padding: 80px 40px 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.accordion-icon {
+  display: none;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.newsletter-box {
+  max-width: 400px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.email-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  flex: 1;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.subscribe-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info .address {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.contact-info .phone {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+/* 📱 Mobile: CaratLane Accordion Styles */
+@media (max-width: 900px) {
+  .footer-parent {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-column {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+  }
+
+  .section-title {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .accordion-icon {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-column.active .accordion-icon {
+    transform: rotate(45deg); /* Plus to X */
+  }
+
+  .footer-list, .contact-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+  }
+
+  .footer-column.active .footer-list,
+  .footer-column.active .contact-content {
+    max-height: 400px;
+    margin-top: 15px;
+  }
+
+  .stay-inspired {
+    border-bottom: none;
+    margin-bottom: 30px;
+  }
+
+  .stay-inspired .section-title {
+    cursor: default;
+    margin-bottom: 20px;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

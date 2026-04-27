@@ -1,0 +1,214 @@
+/* ─── Product Section (Overlap Pattern like Violet Page) ──────────────── */
+.product-section {
+  display: flex;
+  margin: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #efefef;
+}
+
+.product-left {
+  width: 38%;
+  flex-shrink: 0;
+}
+
+.ring-hand-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 20px;
+  background: #fff;
+}
+
+.product-cards {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.product-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px; /* Increased radius */
+  border: 1px solid #f0f0f0;
+  padding: 10px; /* Added padding for white border */
+  padding-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px; /* Radius to match padding */
+  background: #fdfaf7;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 6px 2px; /* Reduced internal padding */
+}
+
+.product-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; /* Even smaller for 3 cards */
+  font-weight: 700;
+  color: #a83228;
+}
+
+.product-original {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; /* Even smaller for 3 cards */
+  color: #555;
+  padding: 0 4px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.carousel-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-arrow:hover:not(.disabled) {
+  border-color: #a83228;
+  background: #fff5f5;
+}
+
+.nav-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.shop-now-btn {
+  background: #a83228;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE: Overlap & Scroll pattern (Matches the Violet Page request) */
+@media (max-width: 900px) {
+  .product-section {
+    flex-direction: column;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: #fdf2f4; /* Updated to match maroon theme */
+  }
+
+  .product-left {
+    width: 100%;
+    height: 400px; /* Taller lifestyle image */
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .product-right {
+    padding: 10px 0 25px; /* Reduced vertical padding */
+    background: transparent;
+    z-index: 5;
+    margin-top: -50px;
+  }
+
+  .product-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px; /* Tighter gap for 3 cards */
+    padding: 0 10px 10px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .product-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-card {
+    min-width: 120px; /* Reduced to fit 3 cards */
+    flex: none;
+    border: none;
+    padding: 3px;
+    padding-bottom: 2px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .product-img-wrapper {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+
+  .product-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Tighter space */
+    padding: 0 15px;
+  }
+  
+  .carousel-nav {
+    display: none;
+  }
+
+  .shop-now-btn {
+    width: 100%;
+    background: #6d303c;
+    border-radius: 8px;
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,84 @@
+.category-section {
+  padding: 40px 32px;
+  background: #fff;
+}
+
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.category-item img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%; /* Circle icons like CaratLane */
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  padding: 5px;
+  background: #f9f9f9;
+}
+
+.category-item:hover img {
+  border-color: #a83228;
+}
+
+.category-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 📱 Mobile: CaratLane Horizontal Circle Scroll */
+@media (max-width: 900px) {
+  .category-section {
+    padding: 20px 0; /* Bleed to edges */
+    margin: 0;
+  }
+  
+  .category-wrapper {
+    overflow-x: auto;
+    padding: 10px 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+  }
+
+  .category-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-item {
+    flex: none;
+    width: 90px;
+  }
+  
+  .category-item img {
+    width: 80px;
+    height: 80px;
+    padding: 3px;
+  }
+  
+  .category-item p {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
