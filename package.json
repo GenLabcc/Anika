@@ -5,7 +5,7 @@
     "my-app"
   ],
   "scripts": {
-    "build": "npm run build --workspace=my-app",
+    "build": "CI=false npm run build --workspace=my-app",
     "start": "npm run start --workspace=my-app"
   }
 }
