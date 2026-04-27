@@ -1,0 +1,11 @@
+{
+  "name": "anika-workspace",
+  "private": true,
+  "workspaces": [
+    "my-app"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=my-app",
+    "start": "npm run start --workspace=my-app"
+  }
+}
