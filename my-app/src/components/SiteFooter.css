@@ -64,7 +64,7 @@
 }
 
 .pill-submit-btn {
-  background: #f04466; /* Vibrant pink/red from reference */
+  background: #e52b50; /* Brand color */
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -91,7 +91,7 @@
 .social-box-icon {
   width: 32px;
   height: 32px;
-  background: #e93e60; /* Specific square button color */
+  background: #e52b50; /* Brand color */
   border-radius: 4px;
   display: flex;
   align-items: center;

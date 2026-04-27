@@ -17,9 +17,9 @@
 
 /* ─── Variables ───────────────────────────────────────────── */
 :root {
-  --crimson: #a83228;
-  --crimson-dark: #8b2420;
-  --crimson-hero: #5a1a1a;
+  --crimson: #e52b50;
+  --crimson-dark: #cc1f42;
+  --crimson-hero: #8b1a2e;
   --blue-stripe: #3a6fa8;
   --text-dark: #111;
   --text-mid: #555;
@@ -357,7 +357,7 @@ body {
   }
 
   .hero-section {
-    margin: 15px 20px;
+    margin: 20px 30px;
   }
 
   .hero-content {
@@ -456,9 +456,16 @@ body {
   }
 
   .hero-image-wrapper {
-    height: 200px;
-    /* Increased height for better visual impact */
+    height: 500px; /* Increased height for better visual impact */
     width: 100%;
+    overflow: hidden; /* Prevent zoomed image from bleeding out */
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2); /* Zoom in effect */
   }
 
   .hero-content {
@@ -476,12 +483,16 @@ body {
   }
 
   .hero-title {
-    font-size: 32px;
-    white-space: normal;
-    /* Wrap text on mobile */
-    color: #111;
+    font-size: 36px;
+    white-space: normal; /* Essential: allows text to wrap on mobile */
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    color: #111;
+  }
+
+  .hero-title.second-line {
+    font-size: 36px;
+    display: block;
   }
 
   .hero-subtitle {
