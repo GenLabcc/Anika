@@ -80,8 +80,8 @@ export default function AnikaHome() {
       <nav className={`navbar ${menuOpen ? 'mobile-open' : ''}`}>
         <div className="nav-links">
           {NAV_LINKS.map((link) => (
-            <button 
-              key={link} 
+            <button
+              key={link}
               className="nav-link"
               onClick={() => {
                 scrollToSection(link === 'Necklaces' ? 'necklaces' : 'categories');
@@ -105,11 +105,11 @@ export default function AnikaHome() {
         <div className="hero-image-wrapper">
 
           {/* Background image */}
-          <img 
-            src={HeroImage} 
-            alt="Jewellery hero" 
-            className="hero-image" 
-            fetchPriority="high" 
+          <img
+            src={HeroImage}
+            alt="Jewellery hero"
+            className="hero-image"
+            fetchPriority="high"
           />
 
           {/* Dark gradient overlay — covers bottom half on mobile, left strip on desktop */}

@@ -5,17 +5,18 @@
 
 .offer-container {
     display: flex;
-    flex-direction: column;
-    background: #fdf2f4; /* Updated to match maroon theme */
+    flex-direction: row; /* Side-by-side for desktop */
+    background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+    border: 1px solid #efefef;
 }
 
 .offer-main-image {
-    width: 100%;
-    height: auto;
+    width: 38%; /* Match ProductSection width */
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -27,20 +28,22 @@
 }
 
 .offer-content {
+    flex: 1;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #fdf2f4; /* Background for the product side */
+    justify-content: center;
 }
 
 .offer-products-grid {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
     justify-content: center;
-    margin-top: -60px;
-    /* Overlap effect like screenshot 2 */
-    padding: 0 20px;
+    margin-top: 0; /* NO overlap on desktop */
+    padding: 0 10px;
     z-index: 5;
 }
 

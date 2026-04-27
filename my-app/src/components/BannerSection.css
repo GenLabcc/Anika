@@ -8,7 +8,7 @@
 /* Base card — just a container, no overlay needed */
 .banner-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
 }

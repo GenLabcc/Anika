@@ -5,7 +5,7 @@ import Product1 from '../assets/offers/image-1.svg';
 import Product2 from '../assets/offers/image-2.svg';
 import Product3 from '../assets/offers/image-3.svg';
 import Product4 from '../assets/offers/image-4.svg';
-import Product5 from '../assets/offers/image-5.svg';
+import Product5 from '../assets/offers/image-6.svg';
 
 const Offers = () => {
   const products = [

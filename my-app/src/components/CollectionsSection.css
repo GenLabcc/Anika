@@ -30,7 +30,7 @@ font-family: 'Agraham', Georgia, serif;
 .collection-card {
   flex: 1;
   max-width: 380px;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -73,5 +73,7 @@ font-family: 'Agraham', Georgia, serif;
 
 @media (max-width: 600px) {
   .collections-title { font-size: 24px; }
-  .collection-card { width: 220px; }
+  .collection-card { width: 160px; }
+  .collection-info h3 { font-size: 16px; }
+  .collection-info p { font-size: 12px; }
 }

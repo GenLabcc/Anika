@@ -27,7 +27,7 @@
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 50%; /* Circle icons like CaratLane */
+  border-radius: 20px; /* Rounded square instead of circle */
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   padding: 5px;

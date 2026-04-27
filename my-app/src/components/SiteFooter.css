@@ -1,5 +1,5 @@
 .footer-parent {
-  background: linear-gradient(180deg, #C42049 0%, #54061D 100%);
+  background: radial-gradient(circle at center, #C42049 0%, #54061D 100%);
   color: #fff;
   padding: 80px 40px 40px;
   font-family: 'Inter', sans-serif;
@@ -12,23 +12,109 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-logo .logo-img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Ensure logo is white */
+}
+
+.footer-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-section {
+  margin-bottom: 30px;
+  max-width: 320px;
+}
+
+.pill-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 4px;
+}
+
+.pill-email-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  flex: 1;
+  font-size: 14px;
+  outline: none;
+}
+
+.pill-email-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pill-submit-btn {
+  background: #f04466; /* Vibrant pink/red from reference */
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.pill-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.socials-section {
+  margin-top: 20px;
+}
+
+.social-box-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-box-icon {
+  width: 32px;
+  height: 32px;
+  background: #e93e60; /* Specific square button color */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.social-box-icon:hover {
+  transform: translateY(-2px);
+}
+
+.social-box-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
 }
 
 .section-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 24px;
-  color: #f5f5f5;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.accordion-icon {
-  display: none;
+  color: #fff;
 }
 
 .footer-list {
@@ -41,84 +127,27 @@
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 14px;
+  transition: color 0.2s;
 }
 
 .footer-link:hover {
   color: #fff;
 }
 
-.newsletter-box {
-  max-width: 400px;
-}
-
-.input-group {
-  display: flex;
-  margin-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.email-input {
-  background: transparent;
-  border: none;
-  color: #fff;
-  padding: 12px 0;
-  flex: 1;
-  font-size: 0.9rem;
-  outline: none;
-}
-
-.subscribe-btn {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  padding: 0 10px;
-  transition: opacity 0.3s ease;
-}
-
-.contact-info .address {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+.address-text {
+  font-size: 13px;
   line-height: 1.6;
-  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
 }
 
-.contact-info .phone {
-  font-size: 1rem;
+.phone-text {
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 20px;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.social-icon img {
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
 }
 
 .footer-bottom {
@@ -130,82 +159,60 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85rem;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .legal-links a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin: 0 5px;
 }
 
-.separator {
-  margin: 0 10px;
+.legal-links a:hover {
+  color: #fff;
 }
 
-/* 📱 Mobile: CaratLane Accordion Styles */
+.dot-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 📱 Mobile Responsiveness */
 @media (max-width: 900px) {
   .footer-parent {
-    padding: 40px 20px 20px;
+    padding: 60px 20px 30px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 40px;
+    margin-bottom: 40px;
   }
 
-  .footer-column {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px 0;
-  }
-
-  .section-title {
-    margin-bottom: 0;
-    font-size: 0.95rem;
+  .brand-column {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    text-align: center;
   }
 
-  .accordion-icon {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 300;
-    transition: transform 0.3s ease;
+  .pill-input-group {
+    width: 100%;
+    max-width: 400px;
   }
 
-  .footer-column.active .accordion-icon {
-    transform: rotate(45deg); /* Plus to X */
-  }
-
-  .footer-list, .contact-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, margin-top 0.3s ease;
-    margin-top: 0;
-  }
-
-  .footer-column.active .footer-list,
-  .footer-column.active .contact-content {
-    max-height: 400px;
-    margin-top: 15px;
-  }
-
-  .stay-inspired {
-    border-bottom: none;
-    margin-bottom: 30px;
-  }
-
-  .stay-inspired .section-title {
-    cursor: default;
-    margin-bottom: 20px;
+  .social-box-links {
+    justify-content: center;
   }
 
   .bottom-content {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     text-align: center;
   }
 }
