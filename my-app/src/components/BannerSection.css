@@ -2,13 +2,14 @@
 .banner-section {
   display: flex;
   gap: 16px;
-  margin: 32px 32px 40px;
+  margin: 10px;
+  padding: 10px;
 }
  
 /* Base card — just a container, no overlay needed */
 .banner-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -45,13 +46,15 @@
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
+  border-radius: 10px;
 }
  
 /* ─── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .banner-section {
     flex-direction: column;
-    margin: 0;
+    margin: 10px;
+    padding: 10px;
     gap: 12px;
   }
   .banner-card {

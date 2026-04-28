@@ -25,6 +25,8 @@
   --text-mid: #555;
   --border: #e8e8e8;
   --header-height: 72px;
+  --std-spacing: 10px;
+  --std-radius: 10px;
 }
 
 /* ─── Reset ───────────────────────────────────────────────── */
@@ -237,8 +239,9 @@ body {
    HERO SECTION
    ══════════════════════════════════════════════════════════ */
 .hero-section {
-  margin: 20px 32px;
-  border-radius: 20px;
+  margin: var(--std-spacing);
+  padding: var(--std-spacing);
+  border-radius: var(--std-radius);
   overflow: hidden;
 }
 
@@ -253,6 +256,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: right center;
+  border-radius: var(--std-radius);
 }
 
 .hero-overlay {
@@ -447,8 +451,9 @@ body {
   }
 
   .hero-section {
-    margin: 0;
-    border-radius: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
     background: transparent;
     display: flex;
     flex-direction: column;

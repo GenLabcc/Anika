@@ -22,7 +22,8 @@
   background-color: var(--border);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  margin: 2.5rem 2rem;
+  margin: 10px;
+  padding: 10px;
 }
 
 .feature-card {
@@ -58,8 +59,10 @@
 }
 
 .showcase-section {
-  padding: 4rem 2rem 5rem;
+  margin: 10px;
+  padding: 10px;
   background: var(--cream);
+  border-radius: 10px;
 }
 
 .showcase-header {
@@ -98,8 +101,8 @@
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 20px;
-  /* Standardized to 20px */
+  border-radius: 10px;
+  /* Standardized to 10px */
   position: relative;
   background: #111;
 }
@@ -181,7 +184,8 @@
   }
 
   .showcase-section {
-    padding: 40px 0;
+    margin: 10px;
+    padding: 10px;
   }
 
   .showcase-header {
