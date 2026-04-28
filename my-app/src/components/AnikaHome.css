@@ -69,6 +69,8 @@ body {
   justify-content: space-between;
   padding: 12px 32px;
   gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -177,8 +179,17 @@ body {
   background: var(--crimson);
   padding: 0 32px;
   height: 48px;
+  justify-content: center; /* Center links on desktop */
+  width: 100%;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .nav-links {

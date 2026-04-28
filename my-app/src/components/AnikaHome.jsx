@@ -69,26 +69,28 @@ export default function AnikaHome() {
 
       {/* ── Navbar ── */}
       <nav className={`navbar ${menuOpen ? 'mobile-open' : ''}`}>
-        <div className="nav-links">
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link}
-              className="nav-link"
-              onClick={() => {
-                scrollToSection(link === 'Necklaces' ? 'necklaces' : 'categories');
-                setMenuOpen(false);
-              }}
-            >
-              {link}
-            </button>
-          ))}
+        <div className="navbar-inner">
+          <div className="nav-links">
+            {NAV_LINKS.map((link) => (
+              <button
+                key={link}
+                className="nav-link"
+                onClick={() => {
+                  scrollToSection(link === 'Necklaces' ? 'necklaces' : 'categories');
+                  setMenuOpen(false);
+                }}
+              >
+                {link}
+              </button>
+            ))}
+          </div>
+          <button className="services-btn">
+            Services
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+          </button>
         </div>
-        <button className="services-btn">
-          Services
-          <svg viewBox="0 0 16 16" width="14" height="14" fill="none">
-            <path d="M4 6l4 4 4-4" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
-          </svg>
-        </button>
       </nav>
 
       {/* ── Hero ── */}
