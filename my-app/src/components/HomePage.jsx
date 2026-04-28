@@ -15,8 +15,7 @@ const SiteFooter = lazy(() => import('./SiteFooter'));
 
 // Loading placeholder for lazy components
 const SectionLoader = () => (
-  <div style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888' }}>
-    Loading Section...
+  <div style={{ height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
   </div>
 );
 

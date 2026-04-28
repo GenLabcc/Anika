@@ -92,9 +92,9 @@
   .frameChild { height: 450px; width: 300px; }
 }
 
-@media (max-width: 600px) {
-  .textParent { padding: 40px 0; }
-  .realExperiences { font-size: 2rem; }
-  .frameChild { height: 350px; width: 240px; }
+@media (max-width: 768px) {
+  .textParent { padding: 40px 0; gap: 30px; }
+  .realExperiences { font-size: 2.2rem; }
+  .frameChild { height: 320px; width: 220px; border-radius: 0; }
   .experience-track { animation-duration: 20s; }
 }

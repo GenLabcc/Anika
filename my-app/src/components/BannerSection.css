@@ -51,8 +51,11 @@
 @media (max-width: 768px) {
   .banner-section {
     flex-direction: column;
-    margin: 16px;
+    margin: 0;
     gap: 12px;
+  }
+  .banner-card {
+    border-radius: 0;
   }
  
   .banner-large {

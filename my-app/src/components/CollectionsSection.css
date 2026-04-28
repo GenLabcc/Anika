@@ -41,9 +41,9 @@ font-family: 'Agraham', Georgia, serif;
 }
 
 /* responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .collections-section {
-    padding: 40px 16px;
+    padding: 40px 0;
   }
   
   .collections-title {

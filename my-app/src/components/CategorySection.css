@@ -46,7 +46,7 @@
 }
 
 /* 📱 Mobile: CaratLane Horizontal Circle Scroll */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .category-section {
     padding: 20px 0; /* Bleed to edges */
     margin: 0;
