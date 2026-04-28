@@ -47,7 +47,7 @@
   font-size: 14px;
   margin: 0;
   opacity: 0.9;
-  font-weight: 300;
+  font-weight: 200;
   max-width: 80%;
 }
 
@@ -73,8 +73,10 @@
   padding: 10px;
   padding-bottom: 15px;
   transition: transform 0.3s ease;
-  overflow: hidden; /* Ensure rounded corners are maintained */
-  transform: translateZ(0); /* Hardware acceleration fix */
+  overflow: hidden;
+  /* Ensure rounded corners are maintained */
+  transform: translateZ(0);
+  /* Hardware acceleration fix */
   backface-visibility: hidden;
 }
 
@@ -98,7 +100,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 12px; /* Standardize with wrapper */
+  border-radius: 12px;
+  /* Standardize with wrapper */
 }
 
 .product-overlay {
@@ -199,7 +202,8 @@
 @media (max-width: 768px) {
   .product-section {
     flex-direction: column;
-    margin: 0 10px 10px; /* Removed top margin */
+    margin: 12px 10px 10px;
+    /* Added top margin */
     padding: 10px;
     border-radius: 10px;
     background: #fff5eb !important;
@@ -281,7 +285,7 @@
     display: flex;
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.3), transparent 60%);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent 60%);
     padding: 25px 20px;
     flex-direction: column;
     justify-content: flex-start;
@@ -292,17 +296,18 @@
 
   .lifestyle-title {
     font-family: 'Agraham', serif;
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 6px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .lifestyle-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     font-size: 13px;
+    font-weight: 100;
     max-width: 200px;
     line-height: 1.4;
     opacity: 0.95;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 }

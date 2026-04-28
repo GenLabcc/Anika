@@ -104,7 +104,8 @@
   border-radius: 10px;
   position: relative;
   background: #111;
-  transform: translateZ(0); /* Rounded corner fix */
+  transform: translateZ(0);
+  /* Rounded corner fix */
   backface-visibility: hidden;
 }
 
@@ -152,7 +153,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 35px;
+    gap: 8px;
     margin: 10px;
     padding: 10px;
     background: transparent;
@@ -161,12 +162,12 @@
   }
 
   .feature-card {
-    flex: 1 1 calc(33% - 20px);
-    min-width: 100px;
-    max-width: 150px;
+    flex: 1 1 calc(30% - 15px);
+    min-width: 95px;
+    max-width: 120px;
     border: 1px solid #f0f0f0;
     border-radius: 8px;
-    padding: 12px 4px;
+    padding: 12px 2px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     text-align: center;
     background: #fff;
@@ -179,9 +180,10 @@
   }
 
   .feature-title {
-    font-size: 9px;
-    line-height: 1.5;
-    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #333;
   }
 
   .feature-desc {

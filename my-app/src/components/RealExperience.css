@@ -41,18 +41,27 @@
 
 .experience-scroll-container {
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
-  /* Optional: Fade edges */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  cursor: grab;
+}
+
+.experience-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.experience-scroll-container:active {
+  cursor: grabbing;
 }
 
 .experience-track {
   display: flex;
   gap: 30px;
   width: max-content;
-  animation: auto-scroll-horizontal 30s linear infinite;
-  padding: 0 15px;
+  padding: 0 40px;
 }
 
 .experience-item {
@@ -85,18 +94,10 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Pause animation on hover */
-.experience-scroll-container:hover .experience-track {
-  animation-play-state: paused;
-}
 
 @keyframes auto-scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 15px)); /* Half of the track length + half gap adjustment */
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
 }
 
 @media (max-width: 1024px) {

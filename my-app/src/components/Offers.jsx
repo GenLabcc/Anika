@@ -24,7 +24,7 @@ const Offers = () => {
           <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" decoding="async" />
           <div className="lifestyle-overlay">
             <h2 className="lifestyle-title">Earrings</h2>
-            <p className="lifestyle-subtitle">Lighten up your look with our new Earrings</p>
+            <p className="lifestyle-subtitle">Frame Your Face</p>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const Offers = () => {
                         <span className="discount-price">₹7,840</span>
                         <span className="original-price">₹9,800</span>
                       </div>
-                      <p className="product-name">Glamore Necklace ...</p>
+                      <p className="product-name">Glamore Earrings ...</p>
                     </div>
                   </div>
                 </div>

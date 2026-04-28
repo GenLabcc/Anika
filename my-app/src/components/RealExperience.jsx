@@ -1,21 +1,23 @@
 // RealExperience.jsx
-import React from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './RealExperience.css';
 import Ig1 from '../assets/ig/Frame 2147225711.svg';
 import Ig2 from '../assets/ig/Frame 2147225712.svg';
 import Ig3 from '../assets/ig/Frame 2147225713.svg';
 import Ig4 from '../assets/ig/Frame 2147225714.svg';
 
+const EXPERIENCES = [
+  { img: Ig1, link: "https://www.instagram.com/reel/DWYuEIsEj9j/?igsh=ZzZ4MXYyNGJhZTR6" },
+  { img: Ig2, link: "https://www.instagram.com/reel/DXOzX2Ckn9w/?igsh=NzR6cmVuNHIxYTRp" },
+  { img: Ig3, link: "https://www.instagram.com/reel/DR1rsagCFF3/?igsh=NG12eWZpNTFzc2k=-271.15" },
+  { img: Ig4, link: "https://www.instagram.com/reel/DTSbHVvkpfA/?igsh=MXBsYXB2ZWxydTByaQ==" },
+];
+
+// Static list of experiences
+const displayItems = EXPERIENCES;
+
 const RealExperience = () => {
-  const EXPERIENCES = [
-    { img: Ig1, link: "https://www.instagram.com/reel/DWYuEIsEj9j/?igsh=ZzZ4MXYyNGJhZTR6" },
-    { img: Ig2, link: "https://www.instagram.com/reel/DXOzX2Ckn9w/?igsh=NzR6cmVuNHIxYTRp" },
-    { img: Ig3, link: "https://www.instagram.com/reel/DR1rsagCFF3/?igsh=NG12eWZpNTFzc2k=-271.15" },
-    { img: Ig4, link: "https://www.instagram.com/reel/DTSbHVvkpfA/?igsh=MXBsYXB2ZWxydTByaQ==" },
-  ];
-  
-  // Duplicating for seamless infinite loop
-  const displayItems = [...EXPERIENCES, ...EXPERIENCES];
+  const scrollRef = useRef(null);
 
   return (
     <div className="textParent">
@@ -26,7 +28,10 @@ const RealExperience = () => {
         </div>
       </div>
       
-      <div className="experience-scroll-container">
+      <div 
+        className="experience-scroll-container" 
+        ref={scrollRef}
+      >
         <div className="experience-track">
           {displayItems.map((item, index) => (
             <a 
@@ -41,6 +46,7 @@ const RealExperience = () => {
           ))}
         </div>
       </div>
+
     </div>
   );
 };
