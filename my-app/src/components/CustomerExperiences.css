@@ -116,6 +116,7 @@
 @media (max-width: 768px) {
   .customer-experiences {
     padding: 40px 0;
+    gap: 30px;
   }
   
   .experiences-text-content {

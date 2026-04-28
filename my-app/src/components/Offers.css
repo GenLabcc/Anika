@@ -187,11 +187,13 @@
 /* 📱 MOBILE RESPONSIVENESS (Screenshot 2 Match) */
 @media (max-width: 900px) {
     .offer-section {
-        padding: 20px 10px;
+        padding: 20px 0;
     }
 
     .offer-container {
-        border-radius: 12px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
         flex-direction: column; /* Stacked on mobile */
     }
 

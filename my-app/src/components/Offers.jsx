@@ -23,8 +23,8 @@ const Offers = () => {
         <div className="offer-main-image">
           <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" />
           <div className="lifestyle-overlay">
-            <h2 className="lifestyle-title">Festive Edit</h2>
-            <p className="lifestyle-subtitle">Celebrate every tradition with Anika's curated collections.</p>
+            <h2 className="lifestyle-title">Earrings</h2>
+            <p className="lifestyle-subtitle">Lighten up your look with our new Earrings edit</p>
           </div>
         </div>
 
