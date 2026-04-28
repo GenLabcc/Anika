@@ -27,7 +27,6 @@ export default function AnikaHome() {
     <div className="page">
 
       {/* Top stripe */}
-      <div className="top-stripe" />
 
       {/* ── Header ── */}
       <header className={`header ${menuOpen ? 'menu-open' : ''}`}>

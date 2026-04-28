@@ -50,11 +50,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── Top Stripe ──────────────────────────────────────────── */
+/* Top Stripe removed as requested */
 .top-stripe {
-  height: 4px;
-  background: var(--blue-stripe);
-  width: 100%;
+  display: none;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -457,7 +455,7 @@ body {
     background: transparent;
     display: flex;
     flex-direction: column;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .hero-image-wrapper {
@@ -465,6 +463,7 @@ body {
     /* Increased height for better visual impact */
     width: 100%;
     overflow: hidden;
+    border-radius: 10px;
     /* Prevent zoomed image from bleeding out */
   }
 
