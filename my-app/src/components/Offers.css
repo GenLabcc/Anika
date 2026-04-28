@@ -88,12 +88,31 @@
     text-align: center;
 }
 
+.offer-img-wrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
 .offer-product-img {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
-    border-radius: 12px;
-    margin-bottom: 12px;
+    display: block;
+    background: #fdfaf7;
+}
+
+.offer-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .offer-card-info {
@@ -111,22 +130,23 @@
 
 .discount-price {
     font-weight: 700;
-    color: oklch(49.389% 0.1558 28.801);
-    font-size: 16px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .original-price {
-    color: #999;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: line-through;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .product-name {
-    font-size: 13px;
-    color: #555;
+    font-size: 12px;
+    color: #fff;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0;
 }
 
 .offer-footer {
@@ -184,96 +204,181 @@
     background: var(--crimson);
 }
 
-/* 📱 MOBILE RESPONSIVENESS (Screenshot 2 Match) */
-@media (max-width: 768px) {
+/* 📱 MOBILE RESPONSIVENESS */
     .offer-section {
-        padding: 20px 0;
+        padding: 10px;
+        background: #fff5eb !important;
     }
 
     .offer-container {
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-        flex-direction: column; /* Stacked on mobile */
+        flex-direction: column;
+        border-radius: 14px;
+        border: none;
+        overflow: visible;
+        background: transparent;
+        box-shadow: none;
+        position: relative;
     }
 
+    /* ── Show the big lifestyle image on mobile ── */
     .offer-main-image {
+        display: block;
+        height: 380px;
         width: 100%;
-        height: 280px; /* Reduced to match ProductSection */
+        border-radius: 20px;
         overflow: hidden;
+        position: relative;
     }
 
-    .offer-content {
-        padding: 10px 15px 20px; /* Reduced vertical padding */
+    .offer-main-image .main-img {
+        height: 100%;
+        object-fit: cover;
     }
 
-    .offer-products-grid {
-        margin-top: -50px;
+    .lifestyle-overlay {
         display: flex;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0,0,0,0.3), transparent 60%);
+        padding: 25px 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: #fff;
+        pointer-events: none;
+    }
+
+    .lifestyle-title {
+        font-family: 'Agraham', serif;
+        font-size: 24px;
+        margin-bottom: 6px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .lifestyle-subtitle {
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        max-width: 200px;
+        line-height: 1.4;
+        opacity: 0.95;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* ── Content area overlaps the main image ── */
+    .offer-content {
+        padding: 0;
+        background: transparent;
+        margin-top: -60px; /* Overlap effect */
+        z-index: 10;
+        width: 100%;
+    }
+
+    /* ── Horizontal scroll row ── */
+    .offer-products-grid {
+        display: flex;
+        flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
-        gap: 6px; /* Tighter gap for 3 cards */
-        padding: 0 12px 10px;
+        gap: 15px;
+        padding: 0 10px 10px;
         scrollbar-width: none;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
+        width: 100%;
     }
 
     .offer-products-grid::-webkit-scrollbar {
         display: none;
     }
 
+    /* ── Individual card: White border and info overlay ── */
     .offer-card {
-        width: 105px; /* Locked width for 3 cards */
-        flex: 0 0 105px;
-        padding: 3px;
-        padding-bottom: 6px;
-        border-radius: 8px;
-        scroll-snap-align: start;
+        flex: 0 0 auto;
+        width: 140px;
+        padding: 0;
+        border-radius: 18px;
         background: #fff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border: 4px solid #fff;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        scroll-snap-align: start;
+        overflow: hidden;
+    }
+
+    .offer-img-wrapper {
+        width: 100%;
+        height: 140px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .offer-product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ── Price and Name overlay on card ── */
+    .offer-overlay {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        padding: 10px 8px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .offer-card-info {
+        color: #fff;
+    }
+
+    .price-tag {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        margin-bottom: 2px;
     }
 
     .discount-price {
-        font-size: 11px; /* Scaled down */
+        font-size: 13px;
+        font-weight: 700;
     }
 
     .original-price {
-        font-size: 9px;
+        font-size: 10px;
+        text-decoration: line-through;
+        opacity: 0.7;
     }
 
     .product-name {
-        font-size: 9px;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: 0.9;
     }
 
-    .offer-footer {
-        margin-top: 10px; /* Reduced space below cards */
-        gap: 12px; /* Tighter gap between dots and button */
-        padding: 0 15px;
-    }
-
-    .nav-btn {
+    /* ── Label below the image removed (using overlay now) ── */
+    .offer-card::after {
         display: none;
+    }
+
+    /* ── Footer / Shop Now button ── */
+    .offer-footer {
+        margin-top: 15px;
+        padding: 0 10px;
+        width: 100%;
     }
 
     .offers-shop-btn {
         width: 100%;
-        /* Full width button on mobile */
-        padding: 12px 0;
-        background: var(--crimson);
+        padding: 14px 0;
+        background: #e52b50; /* Pink from screenshot */
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        border: none;
     }
-
-    .lifestyle-overlay {
-        padding: 30px 15px 15px;
-    }
-
-    .lifestyle-title {
-        font-size: 20px;
-        margin-bottom: 4px;
-    }
-
-    .lifestyle-subtitle {
-        font-size: 12px;
-        max-width: 100%;
-    }
-}

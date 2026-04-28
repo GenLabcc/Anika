@@ -147,7 +147,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 35px;
     margin: 10px;
     padding: 10px;
     background: transparent;
@@ -186,22 +186,26 @@
 
   .showcase-section {
     margin: 10px;
-    padding: 10px;
+    padding: 10px 10px 10px;
+    /* reduced top padding */
   }
 
   .showcase-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 0;
   }
 
   .showcase-title {
     font-size: 32px;
+    padding: 30px 10px 10px;
+    /* increased top gap on mobile */
   }
 
   .gallery-grid {
     display: flex;
     flex-direction: column;
     /* Vertical stack */
-    gap: 16px;
+    gap: 10px;
     padding: 0;
   }
 

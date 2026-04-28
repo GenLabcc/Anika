@@ -15,8 +15,24 @@ const SiteFooter = () => {
           
           {/* Column 1: Logo, Newsletter, Socials */}
           <div className="footer-column brand-column">
-            <div className="footer-logo">
-              <img src={LogoImg} alt="ANIKA" className="logo-img" />
+            <div className="brand-header-mobile">
+              <div className="footer-logo">
+                <img src={LogoImg} alt="ANIKA" className="logo-img" />
+              </div>
+              
+              <div className="socials-section">
+                <div className="social-box-links">
+                  <a href="/" className="social-box-icon" aria-label="Instagram">
+                    <img src={InstagramIcon} alt="Instagram" />
+                  </a>
+                  <a href="/" className="social-box-icon" aria-label="Facebook">
+                    <img src={FacebookIcon} alt="Facebook" />
+                  </a>
+                  <a href="/" className="social-box-icon" aria-label="WhatsApp">
+                    <img src={WhatsappIcon} alt="WhatsApp" />
+                  </a>
+                </div>
+              </div>
             </div>
             
             <div className="newsletter-section">
@@ -26,43 +42,31 @@ const SiteFooter = () => {
                 <button className="pill-submit-btn">Submit</button>
               </div>
             </div>
+          </div>
 
-            <div className="socials-section">
-              <p className="footer-label">Find Us On</p>
-              <div className="social-box-links">
-                <a href="/" className="social-box-icon" aria-label="Instagram">
-                  <img src={InstagramIcon} alt="Instagram" />
-                </a>
-                <a href="/" className="social-box-icon" aria-label="Facebook">
-                  <img src={FacebookIcon} alt="Facebook" />
-                </a>
-                <a href="/" className="social-box-icon" aria-label="WhatsApp">
-                  <img src={WhatsappIcon} alt="WhatsApp" />
-                </a>
-              </div>
+          {/* Wrapper for Discover and Help side-by-side on mobile */}
+          <div className="footer-columns-mobile-row">
+            {/* Column 2: Discover */}
+            <div className="footer-column">
+              <h3 className="section-title">Discover</h3>
+              <ul className="footer-list">
+                <li><a href="/" className="footer-link">Rings & Collections</a></li>
+                <li><a href="/" className="footer-link">Wedding Jewellery</a></li>
+                <li><a href="/" className="footer-link">Necklaces</a></li>
+                <li><a href="/" className="footer-link">Special Services</a></li>
+              </ul>
             </div>
-          </div>
 
-          {/* Column 2: Discover */}
-          <div className="footer-column">
-            <h3 className="section-title">Discover</h3>
-            <ul className="footer-list">
-              <li><a href="/" className="footer-link">Rings & Collections</a></li>
-              <li><a href="/" className="footer-link">Wedding Jewellery</a></li>
-              <li><a href="/" className="footer-link">Necklaces</a></li>
-              <li><a href="/" className="footer-link">Special Services</a></li>
-            </ul>
-          </div>
-
-          {/* Column 3: Help */}
-          <div className="footer-column">
-            <h3 className="section-title">Help</h3>
-            <ul className="footer-list">
-              <li><a href="/" className="footer-link">Payments</a></li>
-              <li><a href="/" className="footer-link">Shipping</a></li>
-              <li><a href="/" className="footer-link">Cancellations & Returns</a></li>
-              <li><a href="/" className="footer-link">FAQ</a></li>
-            </ul>
+            {/* Column 3: Help */}
+            <div className="footer-column">
+              <h3 className="section-title">Help</h3>
+              <ul className="footer-list">
+                <li><a href="/" className="footer-link">Payments</a></li>
+                <li><a href="/" className="footer-link">Shipping</a></li>
+                <li><a href="/" className="footer-link">Cancellations & Returns</a></li>
+                <li><a href="/" className="footer-link">FAQ</a></li>
+              </ul>
+            </div>
           </div>
 
           {/* Column 4: Contact Us */}

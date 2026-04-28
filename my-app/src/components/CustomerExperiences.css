@@ -1,5 +1,5 @@
 .customer-experiences {
-  width: 100%;
+  width: auto; /* Changed from 100% to auto to work with margins */
   background-color: #fffcfa;
   margin: 10px;
   padding: 10px;
@@ -116,12 +116,14 @@
 
 @media (max-width: 768px) {
   .customer-experiences {
-    padding: 40px 0;
+    padding: 10px; /* Equal spacing and margin for mobile view */
+    margin: 10px;
     gap: 30px;
   }
   
   .experiences-text-content {
-    padding: 0 20px;
+    padding: 0 10px;
+    text-align: center;
   }
 
   .experiences-title {
@@ -136,5 +138,13 @@
   /* Hide columns 3 and 4 on mobile for better fit */
   .grid-column:nth-child(n+3) {
     display: none;
+  }
+
+  .experiences-grid {
+    gap: 10px;
+  }
+
+  .grid-column {
+    gap: 10px;
   }
 }

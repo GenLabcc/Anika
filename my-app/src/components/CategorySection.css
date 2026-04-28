@@ -51,6 +51,8 @@
   .category-section {
     margin: 10px;
     padding: 10px;
+    background: #fff5eb !important;
+    border-radius: 14px;
   }
   
   .category-wrapper {

@@ -87,6 +87,8 @@
   border-radius: 12px;
   /* Radius to match padding */
   background: #fdfaf7;
+  position: relative;
+  /* Added for overlay */
 }
 
 .product-img {
@@ -97,35 +99,48 @@
   border-radius: 10px;
 }
 
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 10px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0 0 10px 10px;
+}
+
 .product-info {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 6px;
-  padding: 8px 6px 2px;
-  /* Reduced internal padding */
+  margin-bottom: 4px;
 }
 
 .product-price {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  /* Even smaller for 3 cards */
+  font-size: 13px;
   font-weight: 700;
-  color: #e52b50;
+  color: #fff;
+  /* Changed to white for overlay */
 }
 
 .product-original {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #999;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: line-through;
 }
 
 .product-name {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  /* Even smaller for 3 cards */
-  color: #555;
-  padding: 0 4px;
+  color: #fff;
+  text-align: center;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -182,9 +197,10 @@
 @media (max-width: 768px) {
   .product-section {
     flex-direction: column;
-    margin: 10px;
+    margin: 0 10px 10px; /* Removed top margin */
     padding: 10px;
     border-radius: 10px;
+    background: #fff5eb !important;
   }
 
   .product-left {
@@ -222,33 +238,12 @@
     width: 115px;
     flex: 0 0 115px;
     border: none;
-    padding: 8px;
-    padding-bottom: 12px;
+    padding: 6px;
+    /* Reduced padding */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     scroll-snap-align: start;
     background: #fff;
-  }
-
-  .product-name {
-    font-size: 10px;
-    white-space: normal;
-    height: 2.4em;
-    line-height: 1.2;
-    margin-top: 4px;
-    color: #555;
-  }
-
-  .product-price {
-    font-size: 12px;
-    font-weight: 700;
-    color: #e52b50;
-  }
-
-  .product-original {
-    font-size: 10px;
-    color: #999;
-    text-decoration: line-through;
   }
 
   .product-img-wrapper {
@@ -281,16 +276,31 @@
   }
 
   .lifestyle-overlay {
-    padding: 30px 15px 15px;
+    display: flex;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), transparent 60%);
+    padding: 25px 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    pointer-events: none;
+    z-index: 2;
   }
 
   .lifestyle-title {
-    font-size: 20px;
-    margin-bottom: 4px;
+    font-family: 'Agraham', serif;
+    font-size: 24px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   .lifestyle-subtitle {
-    font-size: 12px;
-    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    max-width: 200px;
+    line-height: 1.4;
+    opacity: 0.95;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
   }
 }

@@ -201,29 +201,79 @@
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-bottom: 30px;
   }
 
   .brand-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* Vertical stack for Logo and Socials */
+  .brand-header-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
+  .socials-section {
+    margin-top: 0;
+  }
+
+  .social-box-links {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .social-box-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Newsletter centered */
+  .newsletter-section {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: 10px;
+    /* Reduced spacing */
   }
 
   .pill-input-group {
     width: 100%;
-    max-width: 400px;
   }
 
-  .social-box-links {
-    justify-content: center;
+  /* Discover and Help side by side */
+  .footer-columns-mobile-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .section-title {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+  .footer-list li {
+    margin-bottom: 8px;
   }
 
   .bottom-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
   }
 }

@@ -7,14 +7,7 @@ import LogoImg from "../assets/logo.svg";
 const NAV_LINKS = ["Rings", "Earrings", "Bracelets", "Bangles", "Necklaces"];
 
 export default function AnikaHome() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const totalSlides = 3;
-
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -25,8 +18,6 @@ export default function AnikaHome() {
 
   return (
     <div className="page">
-
-      {/* Top stripe */}
 
       {/* ── Header ── */}
       <header className={`header ${menuOpen ? 'menu-open' : ''}`}>
@@ -103,7 +94,6 @@ export default function AnikaHome() {
       {/* ── Hero ── */}
       <section className="hero-section">
         <div className="hero-image-wrapper">
-
           {/* Background image */}
           <picture>
             <source media="(max-width: 768px)" srcSet={HeroMobile} />
@@ -118,8 +108,7 @@ export default function AnikaHome() {
           {/* Dark gradient overlay — covers bottom half on mobile, left strip on desktop */}
           <div className="hero-overlay" />
 
-          {/* Text content — always absolute inside the image wrapper.
-              CSS repositions it: left-middle on desktop, bottom-center on mobile */}
+          {/* Text content — absolute inside the image wrapper */}
           <div className="hero-content">
             <h1 className="hero-title">Draped in Elegance</h1>
             <p className="hero-subtitle">
@@ -129,30 +118,6 @@ export default function AnikaHome() {
               Explore Now
             </button>
           </div>
-
-          {/* Carousel controls */}
-          <div className="carousel-controls">
-            <button className="arrow-btn" onClick={prevSlide} aria-label="Previous">
-              <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
-                <path d="M10 4L6 8l4 4" stroke="#222" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-            </button>
-            <div className="dots">
-              {Array.from({ length: totalSlides }).map((_, i) => (
-                <span
-                  key={i}
-                  onClick={() => setCurrentSlide(i)}
-                  className={`dot ${i === currentSlide ? "dot-active" : ""}`}
-                />
-              ))}
-            </div>
-            <button className="arrow-btn" onClick={nextSlide} aria-label="Next">
-              <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
-                <path d="M6 4l4 4-4 4" stroke="#222" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-
         </div>
       </section>
 

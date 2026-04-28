@@ -9,11 +9,11 @@ import Product5 from '../assets/offers/image-6.svg';
 
 const Offers = () => {
   const products = [
-    { id: 1, img: Product1 },
-    { id: 2, img: Product2 },
-    { id: 3, img: Product3 },
-    { id: 4, img: Product4 },
-    { id: 5, img: Product5 },
+    { id: 1, img: Product1, name: 'Rings' },
+    { id: 2, img: Product2, name: 'Earrings' },
+    { id: 3, img: Product3, name: 'Bracelets' },
+    { id: 4, img: Product4, name: 'Bangles' },
+    { id: 5, img: Product5, name: 'Necklaces' },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Offers = () => {
           <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" decoding="async" />
           <div className="lifestyle-overlay">
             <h2 className="lifestyle-title">Earrings</h2>
-            <p className="lifestyle-subtitle">Lighten up your look with our new Earrings edit</p>
+            <p className="lifestyle-subtitle">Lighten up your look with our new Earrings</p>
           </div>
         </div>
 
@@ -32,14 +32,18 @@ const Offers = () => {
         <div className="offer-content">
           <div className="offer-products-grid">
             {products.map((p) => (
-              <div key={p.id} className="offer-card">
-                <img src={p.img} alt="Product" className="offer-product-img" loading="lazy" />
-                <div className="offer-card-info">
-                  <div className="price-tag">
-                    <span className="discount-price">₹7,840</span>
-                    <span className="original-price">₹9,800</span>
+              <div key={p.id} className="offer-card" data-label={p.name}>
+                <div className="offer-img-wrapper">
+                  <img src={p.img} alt={p.name} className="offer-product-img" loading="lazy" />
+                  <div className="offer-overlay">
+                    <div className="offer-card-info">
+                      <div className="price-tag">
+                        <span className="discount-price">₹7,840</span>
+                        <span className="original-price">₹9,800</span>
+                      </div>
+                      <p className="product-name">Glamore Necklace ...</p>
+                    </div>
                   </div>
-                  <p className="product-name">Glamore Necklace ...</p>
                 </div>
               </div>
             ))}
