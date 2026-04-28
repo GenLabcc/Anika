@@ -301,6 +301,8 @@
         box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         scroll-snap-align: start;
         overflow: hidden;
+        transform: translateZ(0);
+        backface-visibility: hidden;
     }
 
     .offer-img-wrapper {

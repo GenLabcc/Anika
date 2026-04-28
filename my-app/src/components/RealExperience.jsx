@@ -7,10 +7,15 @@ import Ig3 from '../assets/ig/Frame 2147225713.svg';
 import Ig4 from '../assets/ig/Frame 2147225714.svg';
 
 const RealExperience = () => {
-  const link = "https://www.instagram.com/reel/DR1rsagCFF3/?igsh=NG12eWZpNTFzc2k%3D";
+  const EXPERIENCES = [
+    { img: Ig1, link: "https://www.instagram.com/reel/DWYuEIsEj9j/?igsh=ZzZ4MXYyNGJhZTR6" },
+    { img: Ig2, link: "https://www.instagram.com/reel/DXOzX2Ckn9w/?igsh=NzR6cmVuNHIxYTRp" },
+    { img: Ig3, link: "https://www.instagram.com/reel/DR1rsagCFF3/?igsh=NG12eWZpNTFzc2k=-271.15" },
+    { img: Ig4, link: "https://www.instagram.com/reel/DTSbHVvkpfA/?igsh=MXBsYXB2ZWxydTByaQ==" },
+  ];
   
-  // Duplicating the set for a seamless infinite loop
-  const images = [Ig1, Ig2, Ig3, Ig4, Ig1, Ig2, Ig3, Ig4];
+  // Duplicating for seamless infinite loop
+  const displayItems = [...EXPERIENCES, ...EXPERIENCES];
 
   return (
     <div className="textParent">
@@ -23,15 +28,15 @@ const RealExperience = () => {
       
       <div className="experience-scroll-container">
         <div className="experience-track">
-          {images.map((img, index) => (
+          {displayItems.map((item, index) => (
             <a 
               key={index} 
-              href={link} 
+              href={item.link} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="experience-item"
             >
-              <img src={img} className="frameChild" alt={`Customer experience ${index + 1}`} loading="lazy" />
+              <img src={item.img} className="frameChild" alt={`Customer experience ${index + 1}`} loading="lazy" />
             </a>
           ))}
         </div>

@@ -28,15 +28,18 @@
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 10px; /* Standardized to 10px */
+  border-radius: 10px;
   border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
   padding: 5px;
   background: #f9f9f9;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .category-item:hover img {
   border-color: #a83228;
+  transform: translateY(-5px) translateZ(0);
 }
 
 .category-item p {

@@ -71,13 +71,15 @@
   border-radius: 20px;
   border: 1px solid #f0f0f0;
   padding: 10px;
-  /* Added padding for white border */
   padding-bottom: 15px;
   transition: transform 0.3s ease;
+  overflow: hidden; /* Ensure rounded corners are maintained */
+  transform: translateZ(0); /* Hardware acceleration fix */
+  backface-visibility: hidden;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) translateZ(0);
 }
 
 .product-img-wrapper {
@@ -85,10 +87,10 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
-  /* Radius to match padding */
   background: #fdfaf7;
   position: relative;
-  /* Added for overlay */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .product-img {
@@ -96,7 +98,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 12px; /* Standardize with wrapper */
 }
 
 .product-overlay {
