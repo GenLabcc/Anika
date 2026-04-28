@@ -114,6 +114,14 @@
 }
 
 @media (max-width: 768px) {
+  .customer-experiences {
+    padding: 40px 0;
+  }
+  
+  .experiences-text-content {
+    padding: 0 20px;
+  }
+
   .experiences-title {
     font-size: 2.2rem;
   }

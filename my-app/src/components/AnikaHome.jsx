@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AnikaHome.css";
 import HeroImage from "../assets/HeroImage.svg";
+import HeroMobile from "../assets/hero image mobile.svg";
 import LogoImg from "../assets/logo.svg";
 
 const NAV_LINKS = ["Rings", "Earrings", "Bracelets", "Bangles", "Necklaces"];
@@ -105,12 +106,15 @@ export default function AnikaHome() {
         <div className="hero-image-wrapper">
 
           {/* Background image */}
-          <img
-            src={HeroImage}
-            alt="Jewellery hero"
-            className="hero-image"
-            fetchPriority="high"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet={HeroMobile} />
+            <img
+              src={HeroImage}
+              alt="Jewellery hero"
+              className="hero-image"
+              fetchPriority="high"
+            />
+          </picture>
 
           {/* Dark gradient overlay — covers bottom half on mobile, left strip on desktop */}
           <div className="hero-overlay" />

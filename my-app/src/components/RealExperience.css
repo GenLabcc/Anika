@@ -93,6 +93,7 @@
 }
 
 @media (max-width: 600px) {
+  .textParent { padding: 40px 0; }
   .realExperiences { font-size: 2rem; }
   .frameChild { height: 350px; width: 240px; }
   .experience-track { animation-duration: 20s; }

@@ -91,8 +91,7 @@
 .social-box-icon {
   width: 32px;
   height: 32px;
-  background: #e52b50; /* Brand color */
-  border-radius: 4px;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,12 +99,12 @@
 }
 
 .social-box-icon:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .social-box-icon img {
-  width: 18px;
-  height: 18px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
 }

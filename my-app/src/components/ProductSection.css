@@ -20,6 +20,35 @@
   display: block;
 }
 
+.lifestyle-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px 24px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lifestyle-title {
+  font-family: 'Agraham', serif;
+  font-size: 28px;
+  margin: 0 0 8px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.lifestyle-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+  max-width: 80%;
+}
+
 .product-right {
   flex: 1;
   display: flex;
@@ -147,38 +176,36 @@
 }
 
 /* 📱 MOBILE: Overlap & Scroll pattern (Matches the Violet Page request) */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .product-section {
     flex-direction: column;
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    background: #fdf2f4;
-    /* Updated to match maroon theme */
+    margin: 0px 0px 24px;
+    border-radius: 10px;
+    padding: 0px 0px 30px;
   }
 
   .product-left {
-    width: 100%;
-    height: 280px; /* Reduced for a more compact mobile layout */
-    border-radius: 12px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 320px;
+    border-radius: 16px;
     overflow: hidden;
     position: relative;
     z-index: 1;
   }
 
   .product-right {
-    padding: 10px 0 25px;
-    /* Reduced vertical padding */
+    padding: 0;
     background: transparent;
     z-index: 5;
-    margin-top: -50px;
+    margin-top: -60px;
   }
 
   .product-cards {
     display: flex;
     overflow-x: auto;
-    gap: 6px;
-    padding: 0 12px 10px;
+    gap: 12px;
+    padding: 14px 16px 20px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -189,42 +216,49 @@
   }
 
   .product-card {
-    width: 105px;
-    flex: 0 0 105px;
+    width: 115px;
+    flex: 0 0 115px;
     border: none;
-    padding: 2px;
-    padding-bottom: 4px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     scroll-snap-align: start;
     background: #fff;
   }
-  }
 
   .product-name {
-    font-size: 9px;
-    /* Scaled down for 3 cards */
+    font-size: 10px;
+    white-space: normal;
+    height: 2.4em;
+    line-height: 1.2;
+    margin-top: 4px;
+    color: #555;
   }
 
   .product-price {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #e52b50;
   }
 
   .product-original {
-    font-size: 9px;
+    font-size: 10px;
+    color: #999;
+    text-decoration: line-through;
   }
 
   .product-img-wrapper {
     aspect-ratio: 1 / 1;
     border-radius: 8px;
+    background: #fdfaf7;
   }
 
   .product-footer {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    /* Tighter space */
-    padding: 0 15px;
+    padding: 0 16px;
   }
 
   .carousel-nav {
@@ -234,6 +268,26 @@
   .shop-now-btn {
     width: 100%;
     background: var(--crimson);
-    border-radius: 8px;
-    padding: 12px 0;
+    border-radius: 10px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
   }
+
+  .lifestyle-overlay {
+    padding: 30px 15px 15px;
+  }
+
+  .lifestyle-title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .lifestyle-subtitle {
+    font-size: 12px;
+    max-width: 100%;
+  }
+}

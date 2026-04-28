@@ -27,6 +27,36 @@
     display: block;
 }
 
+.lifestyle-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 24px 24px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    color: #fff;
+    z-index: 2;
+    pointer-events: none;
+    text-align: left;
+}
+
+.lifestyle-title {
+    font-family: 'Agraham', serif;
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.lifestyle-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 80%;
+}
+
 .offer-content {
     flex: 1;
     padding: 30px;
@@ -225,5 +255,19 @@
         /* Full width button on mobile */
         padding: 12px 0;
         background: var(--crimson);
+    }
+
+    .lifestyle-overlay {
+        padding: 30px 15px 15px;
+    }
+
+    .lifestyle-title {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    .lifestyle-subtitle {
+        font-size: 12px;
+        max-width: 100%;
     }
 }

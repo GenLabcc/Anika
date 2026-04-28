@@ -22,6 +22,10 @@ const Offers = () => {
         {/* Main large image - using FestiveEdit */}
         <div className="offer-main-image">
           <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" />
+          <div className="lifestyle-overlay">
+            <h2 className="lifestyle-title">Festive Edit</h2>
+            <p className="lifestyle-subtitle">Celebrate every tradition with Anika's curated collections.</p>
+          </div>
         </div>
 
         {/* Product carousel side */}
