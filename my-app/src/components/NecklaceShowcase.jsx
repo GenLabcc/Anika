@@ -96,7 +96,7 @@ export default function NecklaceShowcase() {
         <div className="gallery-grid">
           {GALLERY.map(({ src, alt, className }) => (
             <div key={src} className={`gallery-item ${className}`}>
-              <img src={src} alt={alt} loading="lazy" />
+              <img src={src} alt={alt} loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import HomePage from './components/HomePage';
+import ProductionLayout from './components/ProductionLayout';
  
 function App() {
   return (
     <div>
-      <HomePage />
+      <ProductionLayout />
     </div>
   );
 }

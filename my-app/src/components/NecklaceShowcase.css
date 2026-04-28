@@ -11,8 +11,8 @@
   --gold-light: #d4b47a;
   --border: #e8e2d9;
   --card-bg: #ffffff;
-  --shadow-soft: 0 2px 16px rgba(0,0,0,0.06);
-  --shadow-hover: 0 8px 32px rgba(0,0,0,0.10);
+  --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.10);
 }
 
 .features-strip {
@@ -98,7 +98,8 @@
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 20px; /* Standardized to 20px */
+  border-radius: 20px;
+  /* Standardized to 20px */
   position: relative;
   background: #111;
 }
@@ -109,7 +110,8 @@
   object-fit: cover;
   display: block;
   transition: transform 0.55s ease, opacity 0.35s ease;
-  opacity: 1; /* Full opacity for better detail */
+  opacity: 1;
+  /* Full opacity for better detail */
 }
 
 .gallery-item--left {
@@ -140,10 +142,11 @@
 @media (max-width: 768px) {
   .features-strip {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* No side scroll, all in view */
+    grid-template-columns: repeat(3, 1fr);
+    /* No side scroll, all in view */
     gap: 8px;
     margin: 1rem 0;
-    padding: 0 0 10px;
+    padding: 10px 0 20px;
     background: transparent;
     border: none;
     overflow: visible;
@@ -155,7 +158,7 @@
     border: 1px solid #f0f0f0;
     border-radius: 8px;
     padding: 12px 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     text-align: center;
     background: #fff;
   }
@@ -173,7 +176,8 @@
   }
 
   .feature-desc {
-    display: none; /* Keep description hidden as requested earlier */
+    display: none;
+    /* Keep description hidden as requested earlier */
   }
 
   .showcase-section {
@@ -190,7 +194,8 @@
 
   .gallery-grid {
     display: flex;
-    flex-direction: column; /* Vertical stack */
+    flex-direction: column;
+    /* Vertical stack */
     gap: 16px;
     padding: 0;
   }
@@ -201,26 +206,31 @@
   }
 
   /* RECTANGLE layout for middle images only */
-  .gallery-item--center-top, 
+  .gallery-item--center-top,
   .gallery-item--center-bottom {
-    height: 250px; 
+    height: 250px;
   }
 
   /* PORTRAIT layout for side images */
-  .gallery-item--left, 
+  .gallery-item--left,
   .gallery-item--right {
     height: 450px;
   }
 }
 
 @media (max-width: 480px) {
-  .gallery-item--center-top, 
+
+  .gallery-item--center-top,
   .gallery-item--center-bottom {
     height: 220px;
   }
-  .gallery-item--left, 
+
+  .gallery-item--left,
   .gallery-item--right {
     height: 400px;
   }
-  .showcase-title { font-size: 28px; }
+
+  .showcase-title {
+    font-size: 28px;
+  }
 }

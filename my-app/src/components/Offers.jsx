@@ -21,7 +21,7 @@ const Offers = () => {
       <div className="offer-container">
         {/* Main large image - using FestiveEdit */}
         <div className="offer-main-image">
-          <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" />
+          <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" decoding="async" />
           <div className="lifestyle-overlay">
             <h2 className="lifestyle-title">Earrings</h2>
             <p className="lifestyle-subtitle">Lighten up your look with our new Earrings edit</p>

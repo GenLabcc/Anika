@@ -35,7 +35,7 @@ export default function ProductSection() {
  
       {/* Left: hand with ring image */}
       <div className="product-left">
-        <img src={RingHandImg} alt="Ring on hand" className="ring-hand-img" />
+        <img src={RingHandImg} alt="Ring on hand" className="ring-hand-img" loading="lazy" decoding="async" />
       </div>
  
       {/* Right: product cards */}
@@ -46,7 +46,7 @@ export default function ProductSection() {
  
               {/* Product image ONLY — no overlay text */}
               <div className="product-img-wrapper">
-                <img src={product.img} alt={product.name} className="product-img" loading="lazy" />
+                <img src={product.img} alt={product.name} className="product-img" loading="lazy" decoding="async" />
               </div>
  
               {/* Price and name below the image card */}

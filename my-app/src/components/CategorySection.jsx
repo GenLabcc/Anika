@@ -12,27 +12,27 @@ export default function CategorySection() {
       <div className="category-wrapper">
 
         <div className="category-item">
-          <img src={Rings} alt="Rings" loading="lazy" />
+          <img src={Rings} alt="Rings" loading="lazy" decoding="async" />
           <p>Rings</p>
         </div>
 
         <div className="category-item">
-          <img src={Earrings} alt="Earrings" loading="lazy" />
+          <img src={Earrings} alt="Earrings" loading="lazy" decoding="async" />
           <p>Earrings</p>
         </div>
 
         <div className="category-item">
-          <img src={Bracelets1} alt="Bracelets1" loading="lazy" />
+          <img src={Bracelets1} alt="Bracelets1" loading="lazy" decoding="async" />
           <p>Bracelets</p>
         </div>
 
         <div className="category-item">
-          <img src={Bangles} alt="Bangles" loading="lazy" />
+          <img src={Bangles} alt="Bangles" loading="lazy" decoding="async" />
           <p>Bangles</p>
         </div>
 
         <div className="category-item">
-          <img src={Necklaces} alt="Necklaces" loading="lazy" />
+          <img src={Necklaces} alt="Necklaces" loading="lazy" decoding="async" />
           <p>Necklaces</p>
         </div>
 
