@@ -22,6 +22,10 @@ export default function AnikaHome() {
       {/* ── Header ── */}
       <header className={`header ${menuOpen ? 'menu-open' : ''}`}>
         <div className="header-top-row">
+          <div className="logo">
+            <img src={LogoImg} alt="Anika" className="logo-img" />
+          </div>
+
           <button className="burger-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
             <div className={`burger-icon ${menuOpen ? 'open' : ''}`}>
               <span></span>
@@ -29,10 +33,6 @@ export default function AnikaHome() {
               <span></span>
             </div>
           </button>
-
-          <div className="logo">
-            <img src={LogoImg} alt="Anika" className="logo-img" />
-          </div>
 
           <div className="search-wrapper desktop-only">
             <svg className="search-icon" viewBox="0 0 20 20" fill="none">

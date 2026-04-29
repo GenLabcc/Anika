@@ -39,7 +39,8 @@
 
 body {
   overflow-x: hidden;
-  background: #fff;
+  background: #f8f8f8;
+  /* Light background for card contrast */
 }
 
 /* ─── Page ────────────────────────────────────────────────── */
@@ -94,7 +95,8 @@ body {
   padding: 8px 16px;
   gap: 10px;
   background: #fafafa;
-  margin: 0 40px; /* Space between logo and icons */
+  margin: 0 40px;
+  /* Space between logo and icons */
 }
 
 .search-icon {
@@ -356,27 +358,42 @@ body {
   }
 
   .header-top-row {
-    padding: 10px 15px !important;
+    padding: 10px 20px !important;
     margin: 0 !important;
-  }
-
-  .hero-section {
-    margin: 0 !important;
-    /* removed -1px kills the top hairline gap */
-    padding: 0 !important;
-    border-radius: 0 !important;
-    height: auto !important;
-    display: block !important;
-    overflow: hidden !important;
-    background: transparent;
-  }
-
-  .logo-img {
-    height: 32px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .burger-btn {
-    display: block;
+    display: none;
+    /* Hide if not needed like in screenshot */
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .icon-btn {
+    padding: 6px;
+  }
+
+  .mobile-hide {
+    display: flex !important;
+    /* Show account icon on mobile as per screenshot */
+  }
+
+  .hero-section {
+    padding: 15px !important;
+    background: #f8f8f8;
+    margin: 0 !important;
   }
 
   .desktop-only {
@@ -425,12 +442,16 @@ body {
   }
 
   .hero-image-wrapper {
-    height: 80vh !important;
-    height: 40dvh !important;
+    height: auto !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    border-radius: 0 !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    background: #000;
+    /* Backdrop for contain gaps if any */
   }
 
   .hero-image-wrapper picture {
@@ -441,11 +462,12 @@ body {
 
   .hero-image {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    /* Fill the section */
-    border-radius: 0 !important;
+    height: auto !important;
+    min-height: 320px;
+    object-fit: contain !important;
+    /* No zoom as requested */
+    object-position: center center !important;
+    border-radius: 20px !important;
     display: block !important;
   }
 
@@ -459,33 +481,48 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    /* Moved to bottom */
     text-align: center;
-    inset: 0;
-    left: 0;
-    top: 0;
-    transform: none;
-    max-width: 100%;
-    padding: 30px 20px 30px;
-    /* Increased bottom padding to push text higher */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
-    /* Reduced gradient intensity and height */
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    padding: 20px 20px 30px !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 0%) !important;
+    z-index: 5;
+    transform: none !important;
+    /* Reset desktop transform */
+    top: auto !important;
+    /* Reset desktop top */
+    bottom: 0 !important;
   }
 
   .hero-title {
-    font-size: 28px;
-    line-height: 1.6;
-    /* Increased from 1.2 */
+    font-family: 'Agraham', serif;
+    font-size: 14.45px;
+    line-height: 1.2;
     margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .hero-subtitle {
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9.45px;
+    font-weight: 300; /* Light weight */
+    margin-bottom: 10px;
+    opacity: 0.95;
+    max-width: 180px;
+    /* Reduced to force 2 lines */
+    line-height: 1.5;
   }
 
   .explore-btn {
-    padding: 10px 24px;
-    font-size: 14px;
+    background: #e52b50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 600;
   }
 }

@@ -48,16 +48,18 @@ export default function ProductSection() {
           {visible.map((product) => (
             <div key={product.id} className="product-card">
 
-              {/* Product image ONLY — no overlay text */}
+              {/* Product image ONLY */}
               <div className="product-img-wrapper">
                 <img src={product.img} alt={product.name} className="product-img" loading="lazy" decoding="async" />
-                <div className="product-overlay">
-                  <div className="product-info">
-                    <span className="product-price">{product.price}</span>
-                    <span className="product-original">{product.original}</span>
-                  </div>
-                  <p className="product-name">{product.name}</p>
+              </div>
+
+              {/* Product Info below the image */}
+              <div className="product-details">
+                <div className="product-info">
+                  <span className="product-price">{product.price}</span>
+                  <span className="product-original">{product.original}</span>
                 </div>
+                <p className="product-name">{product.name}</p>
               </div>
 
             </div>

@@ -35,14 +35,14 @@ const Offers = () => {
               <div key={p.id} className="offer-card" data-label={p.name}>
                 <div className="offer-img-wrapper">
                   <img src={p.img} alt={p.name} className="offer-product-img" loading="lazy" />
-                  <div className="offer-overlay">
-                    <div className="offer-card-info">
-                      <div className="price-tag">
-                        <span className="discount-price">₹7,840</span>
-                        <span className="original-price">₹9,800</span>
-                      </div>
-                      <p className="product-name">Glamore Earrings ...</p>
+                </div>
+                <div className="offer-details">
+                  <div className="offer-card-info">
+                    <div className="price-tag">
+                      <span className="discount-price">₹7,840</span>
+                      <span className="original-price">₹9,800</span>
                     </div>
+                    <p className="product-name">Glamore Earrings ...</p>
                   </div>
                 </div>
               </div>

@@ -13,8 +13,8 @@ const EXPERIENCES = [
   { img: Ig4, link: "https://www.instagram.com/reel/DTSbHVvkpfA/?igsh=MXBsYXB2ZWxydTByaQ==" },
 ];
 
-// Static list of experiences
-const displayItems = EXPERIENCES;
+// Duplicate items for infinite loop
+const displayItems = [...EXPERIENCES, ...EXPERIENCES, ...EXPERIENCES];
 
 const RealExperience = () => {
   const scrollRef = useRef(null);

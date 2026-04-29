@@ -44,13 +44,28 @@
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
   cursor: grab;
+  padding-bottom: 20px; /* Space for custom scrollbar */
 }
 
+/* Custom Scrollbar */
 .experience-scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  height: 4px;
+  display: block; /* Show as custom scroll */
+}
+
+.experience-scroll-container::-webkit-scrollbar-track {
+  background: rgba(229, 43, 80, 0.05);
+  border-radius: 10px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(229, 43, 80, 0.2);
+  border-radius: 10px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 43, 80, 0.5);
 }
 
 .experience-scroll-container:active {
@@ -62,6 +77,12 @@
   gap: 30px;
   width: max-content;
   padding: 0 40px;
+  animation: auto-scroll-horizontal 40s linear infinite;
+  will-change: transform;
+}
+
+.experience-scroll-container:hover .experience-track {
+  animation-play-state: paused;
 }
 
 .experience-item {
@@ -97,7 +118,7 @@
 
 @keyframes auto-scroll-horizontal {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 15px)); }
+  100% { transform: translateX(calc(-33.33% - 10px)); } /* -33.33% because we have 3 copies */
 }
 
 @media (max-width: 1024px) {

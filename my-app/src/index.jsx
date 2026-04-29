@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Import fonts
+import "@fontsource/inter/300.css"; // Light
+import "@fontsource/inter/400.css"; // Regular
+import "@fontsource/inter/600.css"; // Semi-bold
+import "@fontsource/cinzel/400.css";
+import "@fontsource/cinzel/700.css";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
