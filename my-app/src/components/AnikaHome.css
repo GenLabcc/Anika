@@ -88,13 +88,13 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
   border: 1px solid #c8c8c8;
   border-radius: 6px;
-  padding: 7px 12px;
-  gap: 8px;
+  padding: 8px 16px;
+  gap: 10px;
   background: #fafafa;
-  margin: 0 auto 12px;
+  margin: 0 40px; /* Space between logo and icons */
 }
 
 .search-icon {
@@ -179,7 +179,8 @@ body {
   background: var(--crimson);
   padding: 0 32px;
   height: 48px;
-  justify-content: center; /* Center links on desktop */
+  justify-content: center;
+  /* Center links on desktop */
   width: 100%;
 }
 
@@ -278,20 +279,27 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 65%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
 }
 
+/* Adjust overlay for mobile back to vertical */
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 65%);
+  }
+}
+
 .hero-content {
-  display: none;
-  /* Hidden on desktop by request */
+  display: flex;
+  flex-direction: column;
   position: absolute;
   z-index: 2;
   color: #fff;
-  left: 50px;
+  left: 60px;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 500px;
+  max-width: 550px;
   line-height: normal;
 }
 
@@ -417,9 +425,9 @@ body {
   }
 
   .hero-image-wrapper {
-    height: 480px !important;
-    /* Reduced height from 550px */
-    width: 100vw !important;
+    height: 80vh !important;
+    height: 40dvh !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     border-radius: 0 !important;
@@ -427,7 +435,7 @@ body {
 
   .hero-image-wrapper picture {
     display: block !important;
-    height: auto !important;
+    height: 100% !important;
     width: 100% !important;
   }
 
@@ -435,6 +443,7 @@ body {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    object-position: center top !important;
     /* Fill the section */
     border-radius: 0 !important;
     display: block !important;
@@ -457,9 +466,10 @@ body {
     top: 0;
     transform: none;
     max-width: 100%;
-    padding: 30px 20px 25px;
-    /* Reduced bottom padding from 40px */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+    padding: 30px 20px 30px;
+    /* Increased bottom padding to push text higher */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+    /* Reduced gradient intensity and height */
   }
 
   .hero-title {

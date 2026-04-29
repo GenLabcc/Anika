@@ -34,6 +34,14 @@ export default function AnikaHome() {
             <img src={LogoImg} alt="Anika" className="logo-img" />
           </div>
 
+          <div className="search-wrapper desktop-only">
+            <svg className="search-icon" viewBox="0 0 20 20" fill="none">
+              <circle cx="8.5" cy="8.5" r="5.5" stroke="#888" strokeWidth="1.6" />
+              <path d="M13 13l3.5 3.5" stroke="#888" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+            <input className="search-input" placeholder="Search for Rings, Earrings..." />
+          </div>
+
           <div className="header-actions">
             <button className="icon-btn search-mobile-trigger" aria-label="Search">
               <svg viewBox="0 0 20 20" fill="none" width="22" height="22">
@@ -56,14 +64,6 @@ export default function AnikaHome() {
               </svg>
             </button>
           </div>
-        </div>
-
-        <div className="search-wrapper desktop-only">
-          <svg className="search-icon" viewBox="0 0 20 20" fill="none">
-            <circle cx="8.5" cy="8.5" r="5.5" stroke="#888" strokeWidth="1.6" />
-            <path d="M13 13l3.5 3.5" stroke="#888" strokeWidth="1.6" strokeLinecap="round" />
-          </svg>
-          <input className="search-input" placeholder="Search for Rings, Earrings..." />
         </div>
       </header>
 
