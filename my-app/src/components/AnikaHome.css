@@ -301,7 +301,7 @@ body {
   left: 60px;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 550px;
+  max-width: 800px;
   line-height: normal;
 }
 
@@ -311,6 +311,7 @@ body {
   line-height: 1.6;
   margin-bottom: 15px;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -325,11 +326,12 @@ body {
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 14px 40px;
-  font-size: 16px;
+  padding: 10px 28px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: fit-content;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -342,7 +344,7 @@ body {
 
   .hero-content {
     left: 30px;
-    max-width: 400px;
+    max-width: 700px;
   }
 }
 
@@ -503,6 +505,7 @@ body {
     margin-bottom: 10px;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: normal;
   }
 
   .hero-subtitle {

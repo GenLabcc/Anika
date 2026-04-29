@@ -46,7 +46,7 @@ const FEATURES = [
 // ── Gallery data ──────────────────────────────────────────────────────────────
 const GALLERY = [
   {
-    src: necklace1,
+    src: necklace4,
     alt: 'Gold temple necklace',
     className: 'gallery-item--left',
   },
@@ -61,7 +61,7 @@ const GALLERY = [
     className: 'gallery-item--center-bottom',
   },
   {
-    src: necklace4,
+    src: necklace1,
     alt: 'Long layered necklace set',
     className: 'gallery-item--right',
   },
