@@ -23,8 +23,8 @@ const Offers = () => {
         <div className="offer-main-image">
           <img src={FestiveImg} alt="Special Offer" className="main-img" loading="lazy" decoding="async" />
           <div className="lifestyle-overlay">
-            <h2 className="lifestyle-title">Earrings</h2>
             <p className="lifestyle-subtitle">Frame Your Face</p>
+            <h2 className="lifestyle-title">Earrings</h2>
           </div>
         </div>
 

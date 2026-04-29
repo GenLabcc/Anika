@@ -37,8 +37,8 @@ export default function ProductSection() {
       <div className="product-left">
         <img src={RingHandImg} alt="Ring on hand" className="ring-hand-img" loading="lazy" decoding="async" />
         <div className="lifestyle-overlay">
-          <h2 className="lifestyle-title">Bangles</h2>
           <p className="lifestyle-subtitle">Wear the Memories </p>
+          <h2 className="lifestyle-title">Bangles</h2>
         </div>
       </div>
 
