@@ -57,15 +57,15 @@
     background: #fff5eb !important;
     border-radius: 14px;
   }
-  
+
   .category-wrapper {
     overflow-x: auto;
-    padding: 10px 20px;
+    padding: 9px 10px;
     flex-wrap: nowrap;
     justify-content: flex-start;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-    gap: 15px;
+    gap: 12px 6px;
   }
 
   .category-wrapper::-webkit-scrollbar {
@@ -76,13 +76,13 @@
     flex: none;
     width: 90px;
   }
-  
+
   .category-item img {
     width: 80px;
     height: 80px;
     padding: 3px;
   }
-  
+
   .category-item p {
     font-size: 13px;
     white-space: nowrap;

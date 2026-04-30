@@ -20,6 +20,26 @@ const SectionLoader = () => (
 );
 
 export default function HomePage() {
+  const handleCategoryClick = (name) => {
+    let sectionId = '';
+    
+    if (name === 'Necklaces') {
+      sectionId = 'necklaces';
+    } else if (name === 'Bangles') {
+      sectionId = 'shop';
+    } else if (name === 'Earrings') {
+      sectionId = 'offers';
+    } else {
+      // Rings and Bracelets - do nothing
+      return;
+    }
+
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="homepage">
       {/* Above the fold - loads immediately */}
@@ -29,11 +49,13 @@ export default function HomePage() {
       <Suspense fallback={<SectionLoader />}>
         <div id="shop"><ProductSection /></div>
         <BannerSection />
-        <div id="categories"><CategorySection /></div>
+        <div id="categories" className="desktop-only">
+          <CategorySection onCategoryClick={handleCategoryClick} />
+        </div>
         <CollectionsSection />
         <div id="necklaces"><NecklaceShowcase /></div>
         <RealExperience />
-        <Offers />
+        <div id="offers"><Offers /></div>
         <div id="reviews"><CustomerExperiences /></div>
         <SiteFooter />
       </Suspense>

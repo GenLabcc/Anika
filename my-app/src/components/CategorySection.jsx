@@ -6,36 +6,28 @@ import Bracelets1 from '../assets/Bracelets1.svg';
 import Bangles from '../assets/Bangles.svg';
 import Necklaces from '../assets/Necklaces.svg';
 
-export default function CategorySection() {
+export default function CategorySection({ onCategoryClick }) {
+  const categories = [
+    { name: 'Rings', img: Rings },
+    { name: 'Earrings', img: Earrings },
+    { name: 'Bracelets', img: Bracelets1 },
+    { name: 'Bangles', img: Bangles },
+    { name: 'Necklaces', img: Necklaces },
+  ];
+
   return (
     <section className="category-section">
       <div className="category-wrapper">
-
-        <div className="category-item">
-          <img src={Rings} alt="Rings" loading="lazy" decoding="async" />
-          <p>Rings</p>
-        </div>
-
-        <div className="category-item">
-          <img src={Earrings} alt="Earrings" loading="lazy" decoding="async" />
-          <p>Earrings</p>
-        </div>
-
-        <div className="category-item">
-          <img src={Bracelets1} alt="Bracelets1" loading="lazy" decoding="async" />
-          <p>Bracelets</p>
-        </div>
-
-        <div className="category-item">
-          <img src={Bangles} alt="Bangles" loading="lazy" decoding="async" />
-          <p>Bangles</p>
-        </div>
-
-        <div className="category-item">
-          <img src={Necklaces} alt="Necklaces" loading="lazy" decoding="async" />
-          <p>Necklaces</p>
-        </div>
-
+        {categories.map((cat) => (
+          <div 
+            key={cat.name} 
+            className="category-item" 
+            onClick={() => onCategoryClick && onCategoryClick(cat.name)}
+          >
+            <img src={cat.img} alt={cat.name} loading="lazy" decoding="async" />
+            <p>{cat.name}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

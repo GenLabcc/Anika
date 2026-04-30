@@ -3,6 +3,7 @@ import "./AnikaHome.css";
 import HeroImage from "../assets/HeroImage.svg";
 import HeroMobile from "../assets/hero image mobile.svg";
 import LogoImg from "../assets/logo.svg";
+import CategorySection from "./CategorySection";
 
 const NAV_LINKS = ["Rings", "Earrings", "Bracelets", "Bangles", "Necklaces"];
 
@@ -92,6 +93,20 @@ export default function AnikaHome() {
           </button>
         </div>
       </nav>
+
+      {/* ── Mobile Category Row (Above Hero) ── */}
+      <div className="mobile-top-categories mobile-only">
+        <CategorySection onCategoryClick={(name) => {
+          if (name === 'Necklaces') {
+            scrollToSection('necklaces');
+          } else if (name === 'Bangles') {
+            scrollToSection('shop');
+          } else if (name === 'Earrings') {
+            scrollToSection('offers');
+          }
+          // Rings and Bracelets - do nothing as requested
+        }} />
+      </div>
 
       {/* ── Hero ── */}
       <section className="hero-section">

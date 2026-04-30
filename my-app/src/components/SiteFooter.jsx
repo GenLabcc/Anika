@@ -1,6 +1,6 @@
 import React from 'react';
 import './SiteFooter.css';
-import LogoImg from "../assets/logo.svg";
+import LogoImg from "../assets/footer/logo.svg";
 
 // Social icons from the project assets
 import WhatsappIcon from '../assets/footer/whatsapp.svg';
@@ -12,14 +12,14 @@ const SiteFooter = () => {
     <footer className="footer-parent">
       <div className="footer-container">
         <div className="footer-grid">
-          
+
           {/* Column 1: Logo, Newsletter, Socials */}
           <div className="footer-column brand-column">
             <div className="brand-header-mobile">
               <div className="footer-logo">
                 <img src={LogoImg} alt="ANIKA" className="logo-img" />
               </div>
-              
+
               <div className="socials-section">
                 <div className="social-box-links">
                   <a href="/" className="social-box-icon" aria-label="Instagram">
@@ -34,7 +34,7 @@ const SiteFooter = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="newsletter-section">
               <p className="footer-label">Subscribe to Newsletter</p>
               <div className="pill-input-group">
