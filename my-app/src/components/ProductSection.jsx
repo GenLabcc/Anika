@@ -2,19 +2,19 @@ import { useState } from 'react';
 import './ProductSection.css';
 
 // Import your Figma images
-import RingHandImg from '../assets/RingHand.svg';
-import Product1 from '../assets/Product1.svg';
-import Product2 from '../assets/Product2.svg';
-import Product3 from '../assets/Product3.svg';
-import Product4 from '../assets/Product4.svg';
-import Product5 from '../assets/Product5.svg';
+import RingHandImg from '../assets/RingHand.webp';
+import Product1 from '../assets/Product1.webp';
+import Product2 from '../assets/Product2.webp';
+import Product3 from '../assets/Product3.webp';
+import Product4 from '../assets/Product4.webp';
+import Product5 from '../assets/Product2.webp';
 
 const PRODUCTS = [
-  { id: 1, img: Product1, price: '₹7,840', original: '₹9,800', name: 'Glamore Bangles' },
-  { id: 2, img: Product2, price: '₹7,840', original: '₹9,800', name: 'Glamore Bangles' },
-  { id: 3, img: Product3, price: '₹7,840', original: '₹9,800', name: 'Glamore Bangles' },
-  { id: 4, img: Product4, price: '₹7,840', original: '₹9,800', name: 'Glamore Bangles' },
-  { id: 5, img: Product5, price: '₹7,840', original: '₹9,800', name: 'Glamore Bangles' },
+  { id: 1, img: Product1, price: '₹1,299', original: '₹2,800', name: 'Glamore Bangles' },
+  { id: 2, img: Product2, price: '₹1,199', original: '₹2,500', name: 'Glamore Bangles' },
+  { id: 3, img: Product3, price: '₹1,849', original: '₹2,800', name: 'Glamore Bangles' },
+  { id: 4, img: Product4, price: '₹1,399', original: '₹2,300', name: 'Glamore Bangles' },
+  { id: 5, img: Product5, price: '₹1,249', original: '₹2,500', name: 'Glamore Bangles' },
 ];
 
 const VISIBLE = 5;

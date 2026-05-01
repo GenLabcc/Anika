@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./AnikaHome.css";
-import HeroImage from "../assets/HeroImage.svg";
-import HeroMobile from "../assets/hero image mobile.svg";
-import LogoImg from "../assets/logo.svg";
+import HeroImage from "../assets/HomeImage.webp";
+import HeroMobile from "../assets/hero image mobile.webp";
+import LogoImg from "../assets/footer/logo.svg";
 import CategorySection from "./CategorySection";
 
 const NAV_LINKS = ["Rings", "Earrings", "Bracelets", "Bangles", "Necklaces"];

@@ -1,21 +1,21 @@
 import React from 'react';
 import './Offers.css';
-import FestiveImg from '../assets/offers/image-5.svg';
-import Product1 from '../assets/offers/image-1.svg';
-import Product2 from '../assets/offers/image-2.svg';
-import Product3 from '../assets/offers/image-3.svg';
-import Product4 from '../assets/offers/image-4.svg';
-import Product5 from '../assets/offers/image-6.svg';
+import FestiveImg from '../assets/offers/image-5.webp';
+import Product1 from '../assets/offers/image-1.webp';
+import Product2 from '../assets/offers/image-2.webp';
+import Product3 from '../assets/offers/image-3.webp';
+import Product4 from '../assets/offers/image-4.webp';
+import Product5 from '../assets/offers/image-6.webp';
 
 import { useState } from 'react';
 import './Offers.css';
 
 const PRODUCTS = [
-  { id: 1, img: Product1, price: '₹7,840', original: '₹9,800', name: 'Glamore Earrings' },
-  { id: 2, img: Product2, price: '₹7,840', original: '₹9,800', name: 'Glamore Earrings' },
-  { id: 3, img: Product3, price: '₹7,840', original: '₹9,800', name: 'Glamore Earrings' },
-  { id: 4, img: Product4, price: '₹7,840', original: '₹9,800', name: 'Glamore Earrings' },
-  { id: 5, img: Product5, price: '₹7,840', original: '₹9,800', name: 'Glamore Earrings' },
+  { id: 1, img: Product1, price: '₹749', original: '₹1,200', name: 'Glamore Earrings' },
+  { id: 2, img: Product2, price: '₹899', original: '₹1,200', name: 'Glamore Earrings' },
+  { id: 3, img: Product3, price: '₹650', original: '₹1,200', name: 'Glamore Earrings' },
+  { id: 4, img: Product4, price: '₹800', original: '₹1,200', name: 'Glamore Earrings' },
+  { id: 5, img: Product5, price: '₹799', original: '₹1,200', name: 'Glamore Earrings' },
 ];
 
 const VISIBLE = 5;
