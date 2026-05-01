@@ -1,8 +1,8 @@
 import './CollectionsSection.css';
 
-import Pro1 from '../assets/pro1.svg';
-import Pro2 from '../assets/pro2.svg';
-import Pro3 from '../assets/pro3.svg';
+import Pro1 from '../assets/pro1.webp';
+import Pro2 from '../assets/pro2.webp';
+import Pro3 from '../assets/pro3.webp';
 
 export default function CollectionsSection() {
   return (

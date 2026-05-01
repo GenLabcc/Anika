@@ -1,10 +1,10 @@
 // RealExperience.jsx
 import { useState, useRef, useEffect } from 'react';
 import './RealExperience.css';
-import Ig1 from '../assets/ig/Frame 2147225711.svg';
-import Ig2 from '../assets/ig/Frame 2147225712.svg';
-import Ig3 from '../assets/ig/Frame 2147225713.svg';
-import Ig4 from '../assets/ig/Frame 2147225714.svg';
+import Ig1 from '../assets/ig/Frame 2147225711.webp';
+import Ig2 from '../assets/ig/Frame 2147225712 (1).webp';
+import Ig3 from '../assets/ig/Frame 2147225713.webp';
+import Ig4 from '../assets/ig/Frame 2147225714.webp';
 
 const EXPERIENCES = [
   { img: Ig1, link: "https://www.instagram.com/reel/DWYuEIsEj9j/?igsh=ZzZ4MXYyNGJhZTR6" },

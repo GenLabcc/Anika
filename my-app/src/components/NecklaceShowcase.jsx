@@ -1,10 +1,10 @@
 // NecklaceShowcase.jsx
 import React from 'react';
 import './NecklaceShowcase.css';
-import necklace1 from '../assets/Photo Frame 1.svg';
-import necklace2 from '../assets/Photo Frame 2.svg';
-import necklace3 from '../assets/Photo Frame3.svg';
-import necklace4 from '../assets/Photo Frame 4.svg';
+import necklace1 from '../assets/Photo Frame 1.webp';
+import necklace2 from '../assets/Photo Frame 2.webp';
+import necklace3 from '../assets/Photo Frame.webp';
+import necklace4 from '../assets/Photo Frame 4.webp';
 
 // Features Icons
 import IconQuality from '../assets/review/icons/iconquality.svg';
