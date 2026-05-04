@@ -1,5 +1,6 @@
 .customer-experiences {
-  width: auto; /* Changed from 100% to auto to work with margins */
+  width: auto;
+  /* Changed from 100% to auto to work with margins */
   background-color: #fffcfa;
   margin: 10px;
   padding: 10px;
@@ -16,8 +17,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 0 40px;
+  gap: 25px;
+  padding: 10px 40px;
 }
 
 .experiences-title {
@@ -116,13 +117,14 @@
 
 @media (max-width: 768px) {
   .customer-experiences {
-    padding: 10px; /* Equal spacing and margin for mobile view */
+    padding: 10px;
+    /* Equal spacing and margin for mobile view */
     margin: 10px;
     gap: 30px;
   }
-  
+
   .experiences-text-content {
-    padding: 0 10px;
+    padding: 10px 10px;
     text-align: center;
   }
 
