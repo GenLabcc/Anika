@@ -63,7 +63,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(180deg, #C42049 0%, #54061D 100%);
+  background: linear-gradient(180deg, #54061D 0%, #C42049 100%);
   color: #fff;
   border-bottom: none;
   width: 100%;
@@ -372,7 +372,7 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     height: 80px !important;
-    background: linear-gradient(180deg, #C42049 0%, #54061D 100%) !important;
+    background: linear-gradient(180deg, #54061D 0%, #C42049 100%) !important;
     border-bottom: none !important;
     color: #fff !important;
   }
