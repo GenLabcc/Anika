@@ -416,20 +416,21 @@ body {
     padding: 10px 20px !important;
     margin: 0 !important;
     display: flex;
-    justify-content: space-between;
-  }
-
-  .burger-btn {
-    display: none;
-    /* Hide if not needed like in screenshot */
+    justify-content: flex-end;
+    /* Keep actions on the right */
+    position: relative;
   }
 
   .logo {
-    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
   }
 
   .logo-img {
-    height: 28px;
+    height: 50px;
   }
 
   .header-actions {
