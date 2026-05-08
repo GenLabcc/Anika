@@ -10,26 +10,26 @@ import Product5 from '../assets/offers/image-6.webp';
 import { useState } from 'react';
 import './Offers.css';
 
-const PRODUCTS = [
-  { id: 1, img: Product1, price: '₹749', original: '₹1,200', name: 'Glamore Earrings' },
-  { id: 2, img: Product2, price: '₹899', original: '₹1,200', name: 'Glamore Earrings' },
-  { id: 3, img: Product3, price: '₹650', original: '₹1,200', name: 'Glamore Earrings' },
-  { id: 4, img: Product4, price: '₹800', original: '₹1,200', name: 'Glamore Earrings' },
-  { id: 5, img: Product5, price: '₹799', original: '₹1,200', name: 'Glamore Earrings' },
+export const OFFER_PRODUCTS = [
+  { id: 1, img: Product1, price: '₹749', original: '₹1,200', name: 'Glamore Earrings', category: 'Earrings' },
+  { id: 2, img: Product2, price: '₹899', original: '₹1,200', name: 'Glamore Earrings', category: 'Earrings' },
+  { id: 3, img: Product3, price: '₹650', original: '₹1,200', name: 'Glamore Earrings', category: 'Earrings' },
+  { id: 4, img: Product4, price: '₹800', original: '₹1,200', name: 'Glamore Earrings', category: 'Earrings' },
+  { id: 5, img: Product5, price: '₹799', original: '₹1,200', name: 'Glamore Earrings', category: 'Earrings' },
 ];
 
 const VISIBLE = 5;
 
-export default function Offers() {
+export default function Offers({ onProductClick }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const canPrev = startIndex > 0;
-  const canNext = startIndex + VISIBLE < PRODUCTS.length;
+  const canNext = startIndex + VISIBLE < OFFER_PRODUCTS.length;
 
   const prev = () => { if (canPrev) setStartIndex(startIndex - 1); };
   const next = () => { if (canNext) setStartIndex(startIndex + 1); };
 
-  const visible = PRODUCTS.slice(startIndex, startIndex + VISIBLE);
+  const visible = OFFER_PRODUCTS.slice(startIndex, startIndex + VISIBLE);
 
   return (
     <section className="product-section">
@@ -47,7 +47,12 @@ export default function Offers() {
       <div className="product-right">
         <div className="product-cards">
           {visible.map((product) => (
-            <div key={product.id} className="product-card">
+            <div 
+              key={product.id} 
+              className="product-card"
+              onClick={() => onProductClick && onProductClick(product)}
+              style={{ cursor: 'pointer' }}
+            >
 
               {/* Product image ONLY */}
               <div className="product-img-wrapper">

@@ -9,17 +9,17 @@ import Product3 from '../assets/Product3.webp';
 import Product4 from '../assets/Product4.webp';
 import Product5 from '../assets/Product2.webp';
 
-const PRODUCTS = [
-  { id: 1, img: Product1, price: '₹1,299', original: '₹2,800', name: 'Glamore Bangles' },
-  { id: 2, img: Product2, price: '₹1,199', original: '₹2,500', name: 'Glamore Bangles' },
-  { id: 3, img: Product3, price: '₹1,849', original: '₹2,800', name: 'Glamore Bangles' },
-  { id: 4, img: Product4, price: '₹1,399', original: '₹2,300', name: 'Glamore Bangles' },
-  { id: 5, img: Product5, price: '₹1,249', original: '₹2,500', name: 'Glamore Bangles' },
+export const PRODUCTS = [
+  { id: 1, img: Product1, price: '₹1,299', original: '₹2,800', name: 'Glamore Bangles', category: 'Bangles' },
+  { id: 2, img: Product2, price: '₹1,199', original: '₹2,500', name: 'Glamore Bangles', category: 'Bangles' },
+  { id: 3, img: Product3, price: '₹1,849', original: '₹2,800', name: 'Glamore Bangles', category: 'Bangles' },
+  { id: 4, img: Product4, price: '₹1,399', original: '₹2,300', name: 'Glamore Bangles', category: 'Bangles' },
+  { id: 5, img: Product5, price: '₹1,249', original: '₹2,500', name: 'Glamore Bangles', category: 'Bangles' },
 ];
 
 const VISIBLE = 5;
 
-export default function ProductSection() {
+export default function ProductSection({ onProductClick }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const canPrev = startIndex > 0;
@@ -46,7 +46,12 @@ export default function ProductSection() {
       <div className="product-right">
         <div className="product-cards">
           {visible.map((product) => (
-            <div key={product.id} className="product-card">
+            <div 
+              key={product.id} 
+              className="product-card" 
+              onClick={() => onProductClick(product)}
+              style={{ cursor: 'pointer' }}
+            >
 
               {/* Product image ONLY */}
               <div className="product-img-wrapper">

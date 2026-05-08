@@ -19,7 +19,7 @@ const SectionLoader = () => (
   </div>
 );
 
-export default function HomePage() {
+export default function HomePage({ onProductClick }) {
   const handleCategoryClick = (name) => {
     let sectionId = '';
     
@@ -47,7 +47,7 @@ export default function HomePage() {
 
       {/* Below the fold - lazy loaded */}
       <Suspense fallback={<SectionLoader />}>
-        <div id="shop"><ProductSection /></div>
+        <div id="shop"><ProductSection onProductClick={onProductClick} /></div>
         <BannerSection />
         <div id="categories" className="desktop-only">
           <CategorySection onCategoryClick={handleCategoryClick} />
@@ -55,7 +55,7 @@ export default function HomePage() {
         <CollectionsSection />
         <div id="necklaces"><NecklaceShowcase /></div>
         <RealExperience />
-        <div id="offers"><Offers /></div>
+        <div id="offers"><Offers onProductClick={onProductClick} /></div>
         <div id="reviews"><CustomerExperiences /></div>
         <SiteFooter />
       </Suspense>
