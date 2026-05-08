@@ -167,12 +167,9 @@ export default function ProductPage({ onBack, product, onProductSelect }) {
 
   const handleBuyNow = useCallback(() => {
     const phoneNumber = "919363631636"; // Replace with your actual WhatsApp business number
-    const imageUrl = window.location.origin + displayImage;
     const total = (parseFloat(displayPrice.replace(/[^0-9.]/g, '')) * qty).toLocaleString('en-IN');
 
-    const message = `${imageUrl}
-
-Hello Anika! I would like to buy:
+    const message = `Hello Anika! I would like to buy:
 
 Product: ${displayName}
 Price: ${displayPrice}
