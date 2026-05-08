@@ -174,11 +174,11 @@ export default function ProductPage({ onBack, product, onProductSelect }) {
 
 Hello Anika! I would like to buy:
 
-*Product:* ${displayName}
-*Price:* ${displayPrice}
-*Quantity:* ${qty}
-*Total:* ₹${total}
-*Category:* ${cat}`;
+Product: ${displayName}
+Price: ${displayPrice}
+Quantity: ${qty}
+Total: ₹${total}
+Category: ${cat}`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
