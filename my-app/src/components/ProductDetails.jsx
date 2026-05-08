@@ -35,18 +35,20 @@ const WhatsappIcon = memo(() => (
 
 const ProductGallery = memo(({ activeThumb, setActiveThumb, displayImage, displayName, thumbs }) => (
   <div className="pp-gallery">
-    <div className="pp-thumbs-col">
-      {thumbs.map((item, i) => (
-        <button
-          key={item.id}
-          className={`pp-thumb ${activeThumb === i ? 'active' : ''}`}
-          onClick={() => setActiveThumb(i)}
-          aria-label={`View ${item.alt}`}
-        >
-          <img src={item.img} alt={item.alt} loading="lazy" decoding="async" />
-        </button>
-      ))}
-    </div>
+    {thumbs && thumbs.length > 0 && (
+      <div className="pp-thumbs-col">
+        {thumbs.map((item, i) => (
+          <button
+            key={item.id}
+            className={`pp-thumb ${activeThumb === i ? 'active' : ''}`}
+            onClick={() => setActiveThumb(i)}
+            aria-label={`View ${item.alt}`}
+          >
+            <img src={item.img} alt={item.alt} loading="lazy" decoding="async" />
+          </button>
+        ))}
+      </div>
+    )}
     <div className="pp-main-wrap">
       <div className="pp-main-badge">25% Off</div>
       <img
@@ -115,11 +117,12 @@ export default function ProductPage({ onBack, product, onProductSelect }) {
   const displayOriginal = product?.original || '₹2,800.00';
 
   // Generate dynamic thumbnails based on the selected product
-  const dynamicThumbs = useMemo(() => Array.from({ length: 5 }, (_, i) => ({
-    id: i + 1,
-    img: displayImage,
-    alt: `${displayName} view ${i + 1}`
-  })), [displayImage, displayName]);
+  const dynamicThumbs = useMemo(() => {
+    // For now, we only show thumbnails if we have unique multiple angles.
+    // Since we only have one main image per product, we'll keep this empty
+    // to avoid redundant duplicate thumbnails.
+    return [];
+  }, [displayImage, displayName]);
 
   const cat = product?.category || 'Bangles';
 
@@ -174,7 +177,8 @@ export default function ProductPage({ onBack, product, onProductSelect }) {
 *Quantity:* ${qty}
 *Total:* ₹${(parseFloat(displayPrice.replace(/[^0-9.]/g, '')) * qty).toLocaleString('en-IN')}
 *Category:* ${cat}
-*Image:* ${imageUrl}`;
+
+${imageUrl}`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
